@@ -39,6 +39,10 @@ function addNonWorkingHours(turnaroundHours) {
 function calculateDueDate(submitTime, turnaroundHours) {
   let dueDateinHours = 0;
 
+  if(!isValidSubmitDate(submitTime)){
+      throw new Error("Invalid Submit Time")
+  }
+
   if (isValidSubmitDate(submitTime)) {
     dueDateinHours =
       submitTime.getHours() +
