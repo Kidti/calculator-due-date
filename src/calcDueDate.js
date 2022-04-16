@@ -1,7 +1,5 @@
-const startDate = new Date("2022-04-12T14:12:00");
 const startHour = 9;
 const endHour = 17;
-const turnaroundHours = 16;
 
 function isWeekDay(date) {
   date = new Date(+date);
@@ -49,8 +47,5 @@ function calculateDueDate(submitTime, turnaroundHours) {
 
   return new Date(submitTime.setHours(dueDateinHours));
 }
-
-const result = calculateDueDate(startDate, turnaroundHours);
-console.log("Due date is: " + result);
 
 module.exports = calculateDueDate;

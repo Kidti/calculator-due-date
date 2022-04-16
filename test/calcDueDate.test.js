@@ -7,7 +7,6 @@ test('Calculate due date', () => {
     expect(calcDueDate(submitTime, turnaroundHours)).toStrictEqual(dueDate)
 });
 
-
 test('Calculate due date include weekends', () => {
     const submitTime = new Date("2022-04-15T09:00:00");
     const turnaroundHours = 10;
@@ -15,10 +14,24 @@ test('Calculate due date include weekends', () => {
     expect(calcDueDate(submitTime, turnaroundHours)).toStrictEqual(dueDate)
 });
 
-test('9 hours due date next day', () => {
+test('11 hours due date next day', () => {
     const submitTime = new Date("2022-04-11T09:00:00");
-    const turnaroundHours = 9;
-    const dueDate = new Date("2022-04-12T10:00:00");
+    const turnaroundHours = 11;
+    const dueDate = new Date("2022-04-12T12:00:00");
+    expect(calcDueDate(submitTime, turnaroundHours)).toStrictEqual(dueDate)
+});
+
+test('16 hours due date', () => {
+    const submitTime = new Date("2022-04-12T14:12:00");
+    const turnaroundHours = 16;
+    const dueDate = new Date("2022-04-14T14:12:00");
+    expect(calcDueDate(submitTime, turnaroundHours)).toStrictEqual(dueDate)
+});
+
+test('24 hours due date', () => {
+    const submitTime = new Date("2022-04-11T09:45:00");
+    const turnaroundHours = 24;
+    const dueDate = new Date("2022-04-14T09:45:00");
     expect(calcDueDate(submitTime, turnaroundHours)).toStrictEqual(dueDate)
 });
 
