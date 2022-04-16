@@ -1,4 +1,4 @@
-const calcDueDate = require('./calcDueDate')
+const calcDueDate = require('../src/calcDueDate')
 
 test('Calculate due date', () => {
     const submitTime = new Date("2022-04-12T09:00:00");
