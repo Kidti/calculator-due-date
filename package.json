@@ -1,0 +1,23 @@
+{
+  "name": "calculator-due-date",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kidti/calculator-due-date.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kidti/calculator-due-date/issues"
+  },
+  "homepage": "https://github.com/Kidti/calculator-due-date#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
